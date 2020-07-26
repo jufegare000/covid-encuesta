@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { EncuestasListComponent } from './encuestas-list/encuestas-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EncuestaComponent
+    EncuestaComponent,
+    EncuestasListComponent
   ],
   imports: [
     BrowserModule,

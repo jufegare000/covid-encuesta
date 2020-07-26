@@ -3,7 +3,7 @@ import { Encuesta } from './Encuesta';
 export const ENCUESTAS: Encuesta[] = [
   {
     ciudad: 'Medellin',
-    estratoSocial: '2',
+    estratoSocial: 2,
     ingresoPromedio: 4.3,
     labora: false,
     nivelEducacion: 'primaria',
@@ -13,7 +13,7 @@ export const ENCUESTAS: Encuesta[] = [
   },
   {
     ciudad: 'Medellin',
-    estratoSocial: '2',
+    estratoSocial: 2,
     ingresoPromedio: 4.3,
     labora: false,
     nivelEducacion: 'primaria',
@@ -23,7 +23,7 @@ export const ENCUESTAS: Encuesta[] = [
   },
   {
     ciudad: 'Medellin',
-    estratoSocial: '2',
+    estratoSocial: 2,
     ingresoPromedio: 4.3,
     labora: false,
     nivelEducacion: 'primaria',
@@ -33,7 +33,7 @@ export const ENCUESTAS: Encuesta[] = [
   },
   {
     ciudad: 'Medellin',
-    estratoSocial: '2',
+    estratoSocial: 2,
     ingresoPromedio: 4.3,
     labora: false,
     nivelEducacion: 'primaria',
@@ -43,7 +43,7 @@ export const ENCUESTAS: Encuesta[] = [
   },
   {
     ciudad: 'Medellin',
-    estratoSocial: '2',
+    estratoSocial: 2,
     ingresoPromedio: 4.3,
     labora: false,
     nivelEducacion: 'primaria',
