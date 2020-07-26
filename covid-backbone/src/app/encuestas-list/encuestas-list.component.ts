@@ -1,5 +1,5 @@
-import { ENCUESTAS } from './../model/enuesta-mock';
-import { Encuesta } from './../model/Encuesta';
+import { Router } from '@angular/router';
+import { ENCUESTAS } from '../model/encuestas';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,9 +14,13 @@ export class EncuestasListComponent implements OnInit {
     'Nro', 'Nombre', 'Ciudad', 'Sufre estrés por cuarentena', 'Nivel de duacion', 'Ingresos promedio', 'Estrato',
     'Sigue protocolos', 'Labora'];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  regresar() {
+    this.router.navigateByUrl('/encuesta');
   }
 
 }

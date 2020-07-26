@@ -1,6 +1,6 @@
 import { Encuesta } from './Encuesta';
 
-export const ENCUESTAS: Encuesta[] = [
+export let ENCUESTAS: Encuesta[] = [
   {
     ciudad: 'Medellin',
     estratoSocial: 2,
