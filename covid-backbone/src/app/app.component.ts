@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covid-backbone';
+
+  constructor(router: Router) {
+    router.navigateByUrl('/encuesta');
+  }
+
 }

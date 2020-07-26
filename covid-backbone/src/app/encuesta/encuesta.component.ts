@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Encuesta } from '../model/Encuesta';
-import { FormControl, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-encuesta',
@@ -24,13 +24,12 @@ export class EncuestaComponent implements OnInit {
     'Tecnológico', 'Universitario', 'Maestria', 'Doctorado'];
 
   listaEstratos: number[] = [0, 1, 2, 3, 4, 5, 6];
-
-  formControl = new FormControl();
   selectedNivel = 'Ninguno';
   selectedEstrato = '0';
 
 
-  constructor() {
+  constructor(private router: Router) {
+
   }
 
   ngOnInit(): void {
@@ -38,5 +37,6 @@ export class EncuestaComponent implements OnInit {
 
   enviarForm() {
     console.log(this.encuesta.nivelEducacion);
+    this.router.navigateByUrl('/encuestas-list');
   }
 }
