@@ -4,7 +4,7 @@ export interface Encuesta {
   sufreEstres: boolean;
   nivelEducacion: string;
   ingresoPromedio: number;
-  estratoSocial: string;
+  estratoSocial: number;
   sigueProtocolos: boolean;
   labora: boolean;
 }
