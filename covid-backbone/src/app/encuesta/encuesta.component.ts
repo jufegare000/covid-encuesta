@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Encuesta } from '../model/Encuesta';
 import { Router } from '@angular/router';
-import { Model as BackBoneModel } from '../../backbone/backbone-min.js';
 import { ENCUESTAS } from '../model/encuestas';
 
 @Component({
@@ -39,23 +38,11 @@ export class EncuestaComponent implements OnInit {
 
   enviarForm() {
     console.log(this.encuesta.nivelEducacion);
-    this.generarObjetoBackBone();
+    this.generarObjeto();
     this.router.navigateByUrl('/encuestas-list');
   }
 
-  generarObjetoBackBone() {
-    const objeto: any = BackBoneModel.extend();
-    const nuevaEncuesta = new objeto({
-      ciudad: this.encuesta.ciudad,
-      estratoSocial: this.encuesta.ciudad,
-      ingresoPromedio: this.encuesta.ingresoPromedio,
-      labora: this.encuesta.labora,
-      nivelEducacion: this.encuesta.nivelEducacion,
-      nombrePersona: this.encuesta.nombrePersona,
-      sigueProtocolos: this.encuesta.sigueProtocolos,
-      sufreEstres: this.encuesta.sufreEstres
-    });
-    console.log(nuevaEncuesta.toJSON());
+  generarObjeto() {
     ENCUESTAS.push(this.encuesta);
   }
 }

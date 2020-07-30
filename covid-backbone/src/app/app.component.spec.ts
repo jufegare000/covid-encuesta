@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'covid-backbone'`, () => {
+  it(`should have as title 'covid-encuesta'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('covid-backbone');
+    expect(app.title).toEqual('covid-encuesta');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('covid-backbone app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('covid-encuesta app is running!');
   });
 });
