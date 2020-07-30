@@ -1,0 +1,81 @@
+<p>
+  <mat-toolbar class="toolbar">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="toolbar-text">Encuesta para impacto de Coronavirus en la sociedad</span>
+    <span class="espaceado"></span>
+  </mat-toolbar>
+</p>
+
+<mat-card-content>
+  <div class="container">
+    <form class="encuesta-form">
+      <mat-form-field class="input-form">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="encuesta.nombrePersona" type="text" name="Nombre" placeholder="Nombre"
+          class="input-form">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="input-form">
+        <mat-label>Ciudad</mat-label>
+        <input matInput [(ngModel)]="encuesta.ciudad" type="text" placeholder="Ciudad" aria-label="Number"
+          name="Ciudad">
+      </mat-form-field>
+      <br>
+      <div>
+        <mat-label>¿Sufe de estrés por la cuarentena?</mat-label>
+        <br>
+        <mat-radio-group name="grpEstres">
+          <mat-radio-button [checked]="encuesta.sufreEstres" name="siEstres" value="1">Si</mat-radio-button>
+          <mat-radio-button value="2">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <mat-form-field appearance="fill" class="input-form">
+        <mat-label class="combobox">Nivel de educación</mat-label>
+        <mat-select name="selectNivel" [(value)]="encuesta.nivelEducacion">
+          <mat-option *ngFor="let nivelDeEducacion of nivelesDeEducacion" [value]="nivelDeEducacion">
+            {{nivelDeEducacion}} </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="input-form">
+        <mat-label>Inreso promedio del núcleo familiar</mat-label>
+        <input type="number" placeholder="Ingreso promedio del nucleo familiar" aria-label="Number" matInput
+          name="Ingresos" [(ngModel)]="encuesta.ingresoPromedio">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="select-strato">
+        <mat-label>Estrato social</mat-label>
+        <mat-select ([ngModel])="selectedEstrato" required [(value)]="encuesta.estratoSocial">
+          <mat-option *ngFor="let estrato of listaEstratos" [value]="estrato">
+            {{estrato}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <mat-label>¿Sigue los protocolos de bioseguridad?</mat-label>
+        <br>
+        <mat-radio-group name="grpProtocolos">
+          <mat-radio-button [checked]="encuesta.sigueProtocolos" value="1">Si</mat-radio-button>
+          <mat-radio-button value="2">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <div>
+        <mat-label>¿Está laborando actualmente?</mat-label>
+        <br>
+        <mat-radio-group name="grpLaborando">
+          <mat-radio-button [checked]="encuesta.labora" value="1">Si</mat-radio-button>
+          <mat-radio-button value="2">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <br>
+      <mat-button-toggle class="button" (click)="enviarForm()">Enviar encuesta</mat-button-toggle>
+    </form>
+  </div>
+</mat-card-content>
+
+
+<section>

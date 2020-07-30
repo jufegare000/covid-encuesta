@@ -1,0 +1,31 @@
+.encuesta-form{
+  flex-flow: column wrap;
+  margin-left: 8px;
+}
+
+.container{
+  text-align: center;
+}
+
+.input-form {
+  width: 500px;
+  text-align: center;
+}
+
+
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.select-strato {
+  width: 250px;
+  text-align: center;
+}
+
+.button {
+  background-color: green;
+  font-weight: bold;
+  color: white;
+  font-family: auto;
+}
